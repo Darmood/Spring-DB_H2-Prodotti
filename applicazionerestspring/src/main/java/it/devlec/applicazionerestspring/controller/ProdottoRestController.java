@@ -2,7 +2,6 @@ package it.devlec.applicazionerestspring.controller;
 
 import it.devlec.applicazionerestspring.avviso.ProdottoNonTrovato;
 import it.devlec.applicazionerestspring.model.Prodotto;
-import it.devlec.applicazionerestspring.model.Utente;
 
 import it.devlec.applicazionerestspring.persistenza.ProdottiRepository;
 import org.slf4j.Logger;
@@ -15,6 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@SuppressWarnings("unused")
 public class ProdottoRestController {
     private static Logger logger =
             LoggerFactory.getLogger(ProdottoRestController.class);
