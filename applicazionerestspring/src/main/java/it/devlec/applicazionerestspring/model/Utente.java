@@ -15,6 +15,7 @@ public class Utente {
 
     private Date datadinascita;
 
+
     private Date datadiregistrazione;
     private float ranking;
 
