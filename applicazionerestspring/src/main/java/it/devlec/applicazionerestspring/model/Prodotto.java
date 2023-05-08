@@ -12,10 +12,10 @@ public class Prodotto {
     private Long id;
     private String nome;
     private String descrizione;
-    private Date dataDiAcquisto;
     private Date dataDiProduzione;
-    private Date dataDiPrenotazione;
     private Date dataDiScadenza;
+    private Date dataDiPrenotazione;
+    private Date dataDiAcquisto;
     private float costo;
     private String valuta;
     private Boolean riciclabile;

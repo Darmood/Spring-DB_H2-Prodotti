@@ -1,6 +1,6 @@
 package it.devlec.applicazionerestspring.controller;
 
-import it.devlec.applicazionerestspring.avviso.UtenteNonTrovato;
+import it.devlec.applicazionerestspring.avviso.ProdottoNonTrovato;
 import it.devlec.applicazionerestspring.model.Prodotto;
 import it.devlec.applicazionerestspring.model.Utente;
 
@@ -31,7 +31,7 @@ public class ProdottoRestController {
     @GetMapping("/prodotto/{id}")
     public Prodotto trovaProdottoConID(@PathVariable Long id){
         return repository.findById(id).orElseThrow(
-                () -> new UtenteNonTrovato(id));
+                () -> new ProdottoNonTrovato(id));
     }
     @PostMapping("/prodotto")
     public Prodotto inserisciUnNuovoProdotto(@RequestBody Prodotto p) {
@@ -44,6 +44,49 @@ public class ProdottoRestController {
     @DeleteMapping("/prodotto/{id}")
     void eliminaProdotto(@PathVariable Long id) {
         repository.deleteById(id);
+    }
+    @GetMapping("/prodotti/conNome")
+    public List<Prodotto> trovaProdottoConNome(
+            @RequestParam(name = "nome") String nome
+    ){
+        return repository.findByNome(nome);
+    }
+
+    @GetMapping("/prodotti/conDataDiAcquistoTra")
+    public List<Prodotto> ricercaProdottiConDataDiAcquisto(
+            @RequestParam(name="datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date datada,
+            @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date dataa
+    ){
+        return repository.findByDataDiAcquistoBetween(datada, dataa);
+    }
+    @GetMapping("/prodotti/conDataDiProduzioneTra")
+    public List<Prodotto> ricercaProdottiCondataDiProduzione(
+            @RequestParam(name="datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date datada,
+            @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date dataa
+    ){
+        return repository.findByDataDiProduzioneBetween(datada, dataa);
+    }
+    @GetMapping("/prodotti/conDataDiPrenotazioneTra")
+    public List<Prodotto> ricercaProdottiConDataDiPrenotazione(
+            @RequestParam(name="datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date datada,
+            @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date dataa
+    ){
+        return repository.findByDataDiPrenotazioneBetween(datada, dataa);
+    }
+    @GetMapping("/prodotti/conDataDiScadenzaTra")
+    public List<Prodotto> ricercaProdottiConDataDiScadenza(
+            @RequestParam(name="datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date datada,
+            @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
+            Date dataa
+    ){
+        return repository.findByDataDiScadenzaBetween(datada, dataa);
     }
 
 }

@@ -56,7 +56,7 @@
 //            logger.info("Cognome: "+u.getCognome());
 //            logger.warn(u.toString());
 //          }
-//            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+//          SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 //          Date datadinascita = dateFormat.parse("25-12-2021");
 //          Utente utenteConDatadinascita = new Utente("marco", "dell'anna",
 //                  datadinascita);
