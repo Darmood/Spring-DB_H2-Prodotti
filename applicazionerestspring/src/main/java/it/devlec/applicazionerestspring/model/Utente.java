@@ -10,7 +10,6 @@ public class Utente {
     @Id
     @GeneratedValue
     private Long id;
-
     private String nome;
     private String cognome;
 
