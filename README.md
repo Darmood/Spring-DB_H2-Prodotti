@@ -7,7 +7,7 @@ L'pplicazione è basata su Spring boot con le seguenti funzioni:
 
 ## Risultati test Request su Postman
 
-### Richiesta GET ALL
+### Richiesta GET ALL 
 ```
 http://localhost:8080/prodotti
 ```
