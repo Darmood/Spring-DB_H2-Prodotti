@@ -4,8 +4,8 @@ Questa applicazione permette di effettuare le operazioni crud base, e un insieme
 L'pplicazione è basata su Spring boot con le seguenti funzioni:
 - Database H2 in memoria
 - Restfull API.
-## Risultati test Request su Postman
-Dati memorizzati per ogni prodotto:
+
+### Dati memorizzati per ogni prodotto
 - nome
 - descrizione
 - data di produzione
