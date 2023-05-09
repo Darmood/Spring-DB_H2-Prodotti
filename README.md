@@ -279,7 +279,7 @@ http://localhost:8080/prodotto/1
 ```
 </details>
 
-### Richiesta GET CON NUMERO DI SERIE
+### Richiesta GET CON NUMERO DI SERIE 
 ```
 http://localhost:8080/prodotto/1
 ```
