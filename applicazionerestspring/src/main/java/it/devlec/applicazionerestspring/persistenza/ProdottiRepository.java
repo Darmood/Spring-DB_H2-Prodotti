@@ -19,7 +19,7 @@ public interface ProdottiRepository extends JpaRepository<Prodotto, Long> {
     List<Prodotto> findByValuta(String valuta);
     List<Prodotto> findByRiciclabile(Boolean riciclabile);
     List<Prodotto> findByNumeroModello(Long numeroModello);
-    List<Prodotto> findByNumeroVersione(float numeroVersione);
+    List<Prodotto> findByNumeroVersioneBetween(float min, float max);
     List<Prodotto> findByCodiceABarre(String codiceABarre);
     List<Prodotto> findByNumeroDiSerie(String numeroDiSerie);
 

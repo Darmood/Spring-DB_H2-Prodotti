@@ -28,8 +28,8 @@ public class Prodotto {
     }
 
     public Prodotto(
-            Long id, String nome, String descrizione, Date dataDiAcquisto,
-            Date dataDiProduzione, Date dataDiPrenotazione, Date dataDiScadenza,
+            Long id, String nome, String descrizione, Date dataDiProduzione,
+            Date dataDiScadenza, Date dataDiPrenotazione, Date dataDiAcquisto,
             float costo, String valuta, Boolean riciclabile, Long numeroModello,
             float numeroVersione, String codiceABarre, String numeroDiSerie) {
         this.id = id;

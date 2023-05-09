@@ -26,32 +26,32 @@ public class InizializzazioneDB {
                     null,
                     "Swiffer",
                     "Scopa acchiappa polvere",
-                    sdf.parse("01-01-2024")/* dataDiAcquisto */,
-                    sdf.parse("01-01-2024")/* dataDiProduzione */,
-                    sdf.parse("01-01-2024")/* dataDiPrenotazione */,
+                    sdf.parse("20-01-2022")/* dataDiProduzione */,
                     sdf.parse("01-01-9999")/* dataDiScadenza */,
+                    sdf.parse("10-01-2023")/* dataDiPrenotazione */,
+                    sdf.parse("20-01-2023")/* dataDiAcquisto */,
                     35.97F,
                     "euro",
-                    true,
-                    7L,
-                    3.0F,
-                    "958947589347",
-                    "A54JGU"
+                    false,
+                    765L,
+                    2.5F,
+                    "438925723957",
+                    "G38HG3"
                     );
 
             Prodotto p2 = new Prodotto(
                     null,
                     "Lumios Readix",
                     "Lmpada verde per la lettura",
-                    sdf.parse("01-01-2024")/* dataDiAcquisto */,
-                    sdf.parse("01-01-2024")/* dataDiProduzione */,
-                    sdf.parse("01-01-2024")/* dataDiPrenotazione */,
+                    sdf.parse("20-06-2022")/* dataDiProduzione */,
                     sdf.parse("01-01-9999")/* dataDiScadenza */,
+                    sdf.parse("10-01-2023")/* dataDiPrenotazione */,
+                    sdf.parse("20-01-2023")/* dataDiAcquisto */,
                     56.70F,
-                    "euro",
+                    "USD",
                     true,
-                    7L,
-                    3.0F,
+                    230L,
+                    3.2F,
                     "958947589347",
                     "A54JGU"
             );
@@ -60,21 +60,21 @@ public class InizializzazioneDB {
                     null,
                     "SanCarlo Vivaci",
                     "Patatine alla paprica piccanti",
-                    sdf.parse("01-12-2022")/* dataDiAcquisto */,
-                    sdf.parse("01-01-2022")/* dataDiProduzione */,
-                    sdf.parse("01-12-2022")/* dataDiPrenotazione */,
-                    sdf.parse("20-12-2023")/* dataDiScadenza */,
+                    sdf.parse("20-01-2023")/* dataDiProduzione */,
+                    sdf.parse("20-01-2024")/* dataDiScadenza */,
+                    sdf.parse("10-06-2023")/* dataDiPrenotazione */,
+                    sdf.parse("20-06-2023")/* dataDiAcquisto */,
                     2.50F,
                     "euro",
                     true,
-                    1L,
+                    1035L,
                     1.0F,
                     "560548684865",
                     "G533D5"
             );
 
-            List<Prodotto> utenti = new ArrayList<>(List.of(p1,p2,p3));
-            repository.saveAll(utenti);
+            List<Prodotto> prodotti = new ArrayList<>(List.of(p1,p2,p3));
+            repository.saveAll(prodotti);
         };
     }
 }
