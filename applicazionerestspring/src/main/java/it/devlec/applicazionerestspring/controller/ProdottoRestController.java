@@ -153,18 +153,4 @@ public class ProdottoRestController {
         return repository.findByNumeroDiSerie(numeroDiSerie);
     }
 
-    // Caricamento di file
-    @PostMapping("/prodotti/caricafile")
-    public String caricaFile (@RequestParam("file")MultipartFile file){
-        String infoFile = file.getOriginalFilename() + " - "+ file.getContentType();
-        String conFormat = String.format("%s-%s", file.getOriginalFilename(), file.getContentType());
-        try {
-            InputStream is = file.getInputStream();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        logger.info(infoFile);
-        logger.warn(conFormat);
-        return conFormat;
-    }
 }
